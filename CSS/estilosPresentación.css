@@ -1,0 +1,107 @@
+:root{
+    --neon: rgb(111, 96, 248);
+    --base-1: rgb(0, 0, 0);
+    --color-text: rgb(255, 255, 255);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/imagenes/steve-harvey-U4wcrDteZ2Y-unsplash.jpg);
+    color: var(--color-text);
+    font-family: 'Times New Roman', Times, serif;
+    background-size: 100% ;
+    background-attachment: fixed;
+    backdrop-filter: saturate(1.5);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95% 5%;
+    grid-template-areas: 
+    "header-main"
+    "footer";
+}
+header{
+    grid-area: header-main;
+}
+main{
+    grid-area: header-main;
+}
+footer{
+    grid-area: footer;
+}
+.titulo{
+    background-color: transparent;
+    text-align: center;
+    margin: auto;
+    width: 800px;
+    position: relative;
+    top: 20px;
+    color: var(--base-1);
+    text-shadow: var(--neon) 0px 0px 14px;
+    font-size: 40px;
+    text-decoration-line: underline;
+}
+.pie{
+    background-color: transparent;
+    text-align: center;
+    margin: auto;
+    width: 800px;
+    color: var(--base-1);
+    text-shadow: var(--neon) 0px 0px 8px;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.card{
+    background-color: rgba(0, 0, 0, 0.568);
+    text-align: center;
+    width: 240px;
+    height: 300px;
+    display: inline-block;
+    padding: 130px 0px 130px 0px;
+    border: 1px solid var(--neon);
+    font-size: 32px;
+    border-radius: 18px;
+    backdrop-filter: blur(6px);
+    margin-top: 160px;
+    margin-bottom: 160px;
+    margin-right: 180px;
+    position: relative;
+    left: 100px;
+    right: 100px;
+    transition: .4s;
+    animation-name: respirar;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.curso{
+    text-decoration: none;
+    color: var(--neon);
+    transition: .4s;
+}
+*::selection{
+    background-color: transparent;
+    color: var(--neon);
+}
+.card:hover{
+    color: var(--color-text);
+    transform:translateY(12px);
+    transition: .8s;
+}
+@keyframes respirar {
+    0%{
+        box-shadow: var(--neon) 0px 0px 0px 0px;  
+    }
+    50%{
+        box-shadow: var(--neon) 0px 0px 4px,
+                    var(--neon) 0px 0px 8px,
+                    var(--neon) 0px 0px 16px,
+                    var(--neon) 0px 0px 32px;
+    }
+    100%{
+        box-shadow: var(--neon) 0px 0px 0px 0px; 
+    }
+}
